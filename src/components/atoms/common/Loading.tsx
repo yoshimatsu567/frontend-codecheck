@@ -14,7 +14,7 @@ export const Loading: () => JSX.Element = () => {
 
 const LoadingContainer = styled.div`
     width: 100vw;
-    height: 100%;
+    height: calc(100vh * 2);
     background-color: ${colors.LoadingBackGroundColor};
     position: absolute;
     top: 0px;
