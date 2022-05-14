@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { colors } from '@/styles/theme/colors';
 
-export const Loading: () => JSX.Element = () => {
+const Loading: () => JSX.Element = () => {
     return (
         <LoadingContainer>
             <LoadingCircle />
@@ -12,9 +12,11 @@ export const Loading: () => JSX.Element = () => {
     );
 };
 
+export default Loading;
+
 const LoadingContainer = styled.div`
     width: 100vw;
-    height: 100%;
+    height: calc(100vh * 2);
     background-color: ${colors.LoadingBackGroundColor};
     position: absolute;
     top: 0px;
