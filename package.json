@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "yarn clean; next dev -p 3456;",
+        "dev": "yarn clean; next dev -p 3001;",
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
