@@ -2,7 +2,7 @@
 [都道府県別の総人口推移グラフを表示するSPA(Single Page Application)を構築せよ](https://notion.yumemi.co.jp/0e9ef27b55704d7882aab55cc86c999d)
 
 ## デプロイ先
-
+https://yumemi-frontend-codecheck.vercel.app/
 
 ## 環境
 - yarn(1.22.10)
