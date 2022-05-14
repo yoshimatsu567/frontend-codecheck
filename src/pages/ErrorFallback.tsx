@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { colors } from '../styles/theme/colors';
 
 // components
-import PrimaryButton from '@/components/atoms/button/primaryButton';
+import PrimaryButton from '@/components/atoms/button/PrimaryButton';
 
 const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
     return (
