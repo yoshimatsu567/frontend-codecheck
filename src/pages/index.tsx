@@ -10,6 +10,7 @@ import { Header } from '@/components/molecules/common/Header';
 import { Loading } from '@/components/atoms/common/Loading';
 import PrefectureCheckBoxes from '@/components/organisms/PrefectureCheckboxes';
 import { Main } from '@/components/molecules/common/Main';
+import Chart from '@/components/organisms/Chart';
 
 const Home: NextPage = () => {
     const isLoading = useRecoilValue(isLoadingState);
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
 
             <Main>
                 <PrefectureCheckBoxes />
+                <Chart />
             </Main>
         </>
     );

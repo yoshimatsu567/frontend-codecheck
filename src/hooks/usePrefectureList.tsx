@@ -6,7 +6,7 @@ import { useErrorHandler } from 'react-error-boundary';
 import { isLoadingState } from '@/states/atoms/asyncStatusAtom';
 import { prefectureListState } from '@/states/atoms/prefectureListAtom';
 
-import { getPrefectures } from '@/utils/resas_api';
+import { fetchPrefectureList } from '@/utils/resas_api';
 
 import { checkedPrefectureState } from '@/states/atoms/checkedPrefectureAtom';
 import { PrefectureType, PrefectureCheckBoxType } from '@/types';
@@ -32,7 +32,7 @@ export const useFetchPrefectureList = () => {
 
     useEffect(() => {
         if (!prefectureListData.length) {
-            getPrefectures().then((res) => {
+            fetchPrefectureList().then((res) => {
                 if (res.error) {
                     handleError(res.error);
                 }
