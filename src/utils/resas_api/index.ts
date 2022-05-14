@@ -4,7 +4,7 @@ import { PrefectureType, ResasErrorType } from '@/types';
 
 import { NEXT_PUBLIC_API_KEY } from '@/utils/constants/index';
 
-export const getPrefectures = async () => {
+export const fetchPrefectureList = async () => {
     let data: PrefectureType[] = [];
     let error: ResasErrorType = undefined;
 
