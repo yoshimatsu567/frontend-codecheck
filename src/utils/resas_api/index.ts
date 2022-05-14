@@ -40,6 +40,7 @@ export const fetchPopulationDataByPrefCode = async (prefCode: number) => {
             data = res.data.result?.data[0]?.data;
             const statusCode = res.data.statusCode;
             if (!data && statusCode !== 200) {
+                // responseに都道府県のデータがない && statusCodeが200でない場合をErrorと判定する
                 error = { name: statusCode, message: res.data.message };
             }
         });
