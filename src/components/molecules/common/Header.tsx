@@ -9,7 +9,7 @@ import { devices } from '@/styles/theme/devices';
 // components
 import Link from 'next/link';
 
-export const Header: React.FC = () => {
+const Header: React.FC = () => {
     return (
         <HeaderContainer>
             <Link href={'/'} passHref>
@@ -19,7 +19,9 @@ export const Header: React.FC = () => {
     );
 };
 
-export const HeaderContainer = styled.header`
+export default Header;
+
+const HeaderContainer = styled.header`
     width: 100%;
     height: 60px;
     padding: 0 20px;
@@ -32,7 +34,7 @@ export const HeaderContainer = styled.header`
     background-color: ${colors.WhiteColor};
     border-bottom: 1px solid ${colors.BorderColor};
 `;
-export const HeaderTitle = styled.h1`
+const HeaderTitle = styled.h1`
     font-size: ${fontSizes.HeaderTitleSize_PC};
     font-weight: bold;
     cursor: pointer;

@@ -7,9 +7,11 @@ export interface PrefectureCheckBoxType extends PrefectureType {
     checked: boolean;
 }
 
+export type PopulationDataType = { year: number; value: number }[];
+
 export type PrefecturePopulationType = {
     name: string;
-    data: { year: number; value: number }[];
+    data: PopulationDataType;
 };
 
 export type ResasErrorType =
