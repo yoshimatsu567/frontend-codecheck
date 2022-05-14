@@ -1,10 +1,19 @@
 import type { NextPage } from 'next';
 
+import { useRecoilValue } from 'recoil';
+
+import { isLoadingState } from '@/states/atoms/asyncStatusAtom';
+
 // components
 import Head from 'next/head';
 import { Header } from '@/components/molecules/common/Header';
+import { Loading } from '@/components/atoms/common/Loading';
+import PrefectureCheckBoxes from '@/components/organisms/PrefectureCheckboxes';
+import { Main } from '@/components/molecules/common/Main';
 
 const Home: NextPage = () => {
+    const isLoading = useRecoilValue(isLoadingState);
+
     return (
         <>
             <Head>
@@ -15,7 +24,12 @@ const Home: NextPage = () => {
                 />
                 <link rel='icon' href='/favicon.png' />
             </Head>
+            {isLoading ? <Loading /> : null}
             <Header />
+
+            <Main>
+                <PrefectureCheckBoxes />
+            </Main>
         </>
     );
 };
