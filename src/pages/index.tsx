@@ -9,10 +9,10 @@ import { PrefectureType } from '@/types';
 import { fetchPrefectureList } from '@/utils/resas_api';
 
 // components
-import { Header } from '@/components/molecules/common/Header';
-import { Loading } from '@/components/atoms/common/Loading';
+import Header from '@/components/molecules/common/Header';
+import Loading from '@/components/atoms/common/Loading';
 import PrefectureCheckBoxes from '@/components/organisms/PrefectureCheckboxes';
-import { Main } from '@/components/molecules/common/Main';
+import Main from '@/components/molecules/common/Main';
 import Chart from '@/components/organisms/Chart';
 import HeadContainer from '@/components/molecules/common/HeadContainer';
 

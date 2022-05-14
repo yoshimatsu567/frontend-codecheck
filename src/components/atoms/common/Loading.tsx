@@ -4,13 +4,15 @@ import styled from 'styled-components';
 
 import { colors } from '@/styles/theme/colors';
 
-export const Loading: () => JSX.Element = () => {
+const Loading: () => JSX.Element = () => {
     return (
         <LoadingContainer>
             <LoadingCircle />
         </LoadingContainer>
     );
 };
+
+export default Loading;
 
 const LoadingContainer = styled.div`
     width: 100vw;

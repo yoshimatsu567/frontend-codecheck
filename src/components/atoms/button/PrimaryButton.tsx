@@ -15,6 +15,8 @@ const PrimaryButton: React.FC<Props> = (props) => {
     );
 };
 
+export default PrimaryButton;
+
 const PrimaryButtonStyle = styled.button`
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -32,5 +34,3 @@ const PrimaryButtonStyle = styled.button`
         color: ${colors.HoveringWhiteColor};
     }
 `;
-
-export default PrimaryButton;
