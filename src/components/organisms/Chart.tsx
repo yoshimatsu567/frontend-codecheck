@@ -13,7 +13,7 @@ import { populationDataForChartState } from '@/states/selectors/populationDataFo
 const Chart: React.FC = () => {
     // 都道府県がチェックされるたびに、チェックされた都道府県の人口推移データを取得する
     usePopulationData();
-    
+
     const populationDataForChart = useRecoilValue(populationDataForChartState);
 
     return (

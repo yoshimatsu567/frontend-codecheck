@@ -12,7 +12,9 @@ import Link from 'next/link';
 const Header: React.FC = () => {
     return (
         <HeaderContainer>
-            <Link href={'https://yumemi-frontend-codecheck.vercel.app'} passHref>
+            <Link
+                href={'https://yumemi-frontend-codecheck.vercel.app'}
+                passHref>
                 <HeaderTitle>県別の総人口推移表示するアプリ</HeaderTitle>
             </Link>
         </HeaderContainer>

@@ -10,10 +10,10 @@ type MainProps = {
 
 const Main: React.FC<MainProps> = (props) => {
     return (
-    <MainContainer>
-        <MainDummyElement />
-        {props.children}
-    </MainContainer>
+        <MainContainer>
+            <MainDummyElement />
+            {props.children}
+        </MainContainer>
     );
 };
 
