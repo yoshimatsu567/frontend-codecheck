@@ -40,8 +40,8 @@ const PrefectureCheckBoxes: React.FC<Props> = ({ prefectureList }) => {
                         props={{
                             key: item.prefCode,
                             title: item.prefName,
+                            onChange: useOnChangeHandler,
                         }}
-                        onChange={useOnChangeHandler}
                     />
                 </React.Fragment>
             ))}
