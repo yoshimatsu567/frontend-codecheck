@@ -12,6 +12,7 @@ react (18.1.0)
 typescript (4.6.3)  
 next (12.1.6)  
 recoil (0.7.2)  
+react-error-boundary (3.1.4)
 
 styled-components (5.3.5)  
 axios (0.26.1)  
