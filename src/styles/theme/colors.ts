@@ -2,6 +2,7 @@ export const colors = {
     BorderColor: '#EBEBEB',
     BlackColor: '#000000',
     HoveringBlackColor: '#606060',
+    CaptionColor: '#808080',
     WhiteColor: '#FFFFFF',
     HoveringWhiteColor: '#EBEBEB',
     PrimaryColor: '#00A0D1',
