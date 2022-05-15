@@ -63,6 +63,10 @@ export const setPrefecturePopulationDataForChart = (
         series: !checkedSeriesData.length
             ? notCheckedSeriesData
             : checkedSeriesData,
+        legend: {
+            align: 'center',
+            verticalAlign: 'top',
+        },
         yAxis: {
             title: {
                 text: '人口',
