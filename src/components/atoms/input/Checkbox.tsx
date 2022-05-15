@@ -7,17 +7,20 @@ import { devices } from '@/styles/theme/devices';
 import { fontSizes } from '@/styles/theme/fontSizes';
 
 type CheckboxProps = {
-    props: { key: number; title: string };
-    onChange: (key: number, title: string, checked: boolean) => void;
+    props: {
+        key: number;
+        title: string;
+        onChange: (key: number, title: string, checked: boolean) => void;
+    };
 };
 
-const Checkbox: React.FC<CheckboxProps> = ({ props, onChange }) => {
+const Checkbox: React.FC<CheckboxProps> = ({ props }) => {
     return (
         <CheckBoxLabel htmlFor={props.title}>
             <CheckBox
                 type='checkbox'
                 onChange={(e) =>
-                    onChange(props.key, props.title, e.target.checked)
+                    props.onChange(props.key, props.title, e.target.checked)
                 }
                 id={props.title}
             />

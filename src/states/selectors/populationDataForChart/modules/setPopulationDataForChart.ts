@@ -2,6 +2,14 @@ import Highcharts from 'highcharts';
 
 import { PrefecturePopulationType } from '@/types/index';
 
+import { colors } from '@/styles/theme/colors';
+import { fontSizes } from '@/styles/theme/fontSizes';
+
+/**
+ * 取得済の県別人口データをグラフで描画するように成形して返す
+ * @param prefecturePopulationData - 取得済の県別人口データ
+ * @returns prefecturePopulationOptionsData
+ */
 export const setPrefecturePopulationDataForChart = (
     prefecturePopulationData: PrefecturePopulationType[]
 ) => {
@@ -21,7 +29,7 @@ export const setPrefecturePopulationDataForChart = (
 
             if (filteredItem) {
                 data = [...data, item.value];
-                year = [...year, String(item.year)];
+                year = [...year, `${item.year}`];
             }
         }
 
@@ -36,13 +44,13 @@ export const setPrefecturePopulationDataForChart = (
             enabled: false,
         },
         title: {
-            text: '人口推移グラフ',
+            text: '総人口推移グラフ',
         },
         subtitle: {
             text: '出典: https://opendata.resas-portal.go.jp',
             style: {
-                fontSize: '10px',
-                color: '#606060',
+                fontSize: `${fontSizes.CaptionTextSize}`,
+                color: `${colors.CaptionColor}`,
             },
         },
         xAxis: {
@@ -70,7 +78,7 @@ export const setPrefecturePopulationDataForChart = (
 };
 
 /**
- *
+ * itemがmin（xxxx年）以上max(xxxx年)以下であれば返し、含まれていなければnullを返すフィルター
  * @param item
  * @param min フィルター後、残したい最古の年代
  * @param max フィルター後、残したい最新の年代

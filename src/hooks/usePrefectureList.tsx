@@ -5,7 +5,7 @@ import { PrefectureCheckBoxType, PrefectureType } from '@/types';
 import { checkedPrefectureState } from '@/states/atoms/checkedPrefectureAtom';
 import { prefectureListState } from '@/states/atoms/prefectureListAtom';
 
-export type UsePrefectureListType = () => {
+type UsePrefectureListType = () => {
     setPrefectureList: SetterOrUpdater<PrefectureType[]>;
     setCheckedPrefecture: SetterOrUpdater<PrefectureCheckBoxType | null>;
 };
