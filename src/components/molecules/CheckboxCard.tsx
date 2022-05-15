@@ -4,14 +4,17 @@ import styled from 'styled-components';
 import Checkbox from '../atoms/input/Checkbox';
 
 type CheckboxCardProps = {
-    props: { key: number; title: string };
-    onChange: (key: number, title: string, checked: boolean) => void;
+    props: {
+        key: number;
+        title: string;
+        onChange: (key: number, title: string, checked: boolean) => void;
+    };
 };
 
-const CheckboxCard: React.FC<CheckboxCardProps> = ({ props, onChange }) => {
+const CheckboxCard: React.FC<CheckboxCardProps> = ({ props }) => {
     return (
         <PrefectureCheckBoxWrapper>
-            <Checkbox props={props} onChange={onChange} />
+            <Checkbox props={props} />
         </PrefectureCheckBoxWrapper>
     );
 };

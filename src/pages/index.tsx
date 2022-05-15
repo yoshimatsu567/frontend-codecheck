@@ -9,12 +9,12 @@ import { PrefectureType } from '@/types';
 import { fetchPrefectureList } from '@/utils/resas_api';
 
 // components
-import Header from '@/components/molecules/common/Header';
 import Loading from '@/components/atoms/common/Loading';
-import PrefectureCheckBoxes from '@/components/organisms/PrefectureCheckboxes';
-import Main from '@/components/molecules/common/Main';
-import Chart from '@/components/organisms/Chart';
 import HeadContainer from '@/components/molecules/common/HeadContainer';
+import Header from '@/components/molecules/common/Header';
+import Main from '@/components/molecules/common/Main';
+import PrefectureCheckBoxes from '@/components/organisms/PrefectureCheckboxes';
+import Chart from '@/components/organisms/Chart';
 
 type StaticProps = {
     prefectureList: PrefectureType[];
@@ -25,8 +25,8 @@ const Home: React.FC<StaticProps> = ({ prefectureList }) => {
 
     return (
         <>
-            <HeadContainer />
             {isLoading ? <Loading /> : null}
+            <HeadContainer />
             <Header />
             <Main>
                 <PrefectureCheckBoxes prefectureList={prefectureList} />

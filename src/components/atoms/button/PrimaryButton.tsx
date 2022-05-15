@@ -15,7 +15,7 @@ const PrimaryButton: React.FC<Props> = (props) => {
     );
 };
 
-export default PrimaryButton;
+export default React.memo(PrimaryButton);
 
 const PrimaryButtonStyle = styled.button`
     -webkit-appearance: none;
