@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import usePrefectureList from '@/hooks/usePrefectureList';
 
@@ -23,14 +23,13 @@ const PrefectureCheckBoxes: React.FC<Props> = ({ prefectureList }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    // 都道府県チェックボックスのハンドラー
-    const useOnChangeHandler = useCallback(
-        (prefCode: number, prefName: string, checked: boolean) => {
-            setCheckedPrefecture({ prefCode, prefName, checked });
-        },
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        []
-    );
+    const useOnChangeHandler = (
+        prefCode: number,
+        prefName: string,
+        checked: boolean
+    ) => {
+        setCheckedPrefecture({ prefCode, prefName, checked });
+    };
 
     return (
         <PrefectureCheckBoxContainer>
