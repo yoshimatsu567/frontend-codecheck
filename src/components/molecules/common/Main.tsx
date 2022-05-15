@@ -9,14 +9,18 @@ type MainProps = {
 };
 
 const Main: React.FC<MainProps> = (props) => {
-    return <MainContainer>{props.children}</MainContainer>;
+    return (
+    <MainContainer>
+        <MainDummyElement />
+        {props.children}
+    </MainContainer>
+    );
 };
 
 export default Main;
 
 const MainContainer = styled.main`
     margin: 0px 200px 0;
-    padding-top: 80px;
 
     @media ${devices.desktop} {
         margin: 0 20px;
@@ -24,5 +28,12 @@ const MainContainer = styled.main`
 
     @media ${devices.tablet} {
         margin: 0;
+    }
+`;
+const MainDummyElement = styled.div`
+    height: 80px;
+
+    @media ${devices.tablet} {
+        height: 65px;
     }
 `;
