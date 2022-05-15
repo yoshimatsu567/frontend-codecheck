@@ -28,7 +28,8 @@ const PrefectureCheckBoxes: React.FC<Props> = ({ prefectureList }) => {
         (prefCode: number, prefName: string, checked: boolean) => {
             setCheckedPrefecture({ prefCode, prefName, checked });
         },
-        [setCheckedPrefecture]
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        []
     );
 
     return (
@@ -50,9 +51,9 @@ const PrefectureCheckBoxes: React.FC<Props> = ({ prefectureList }) => {
 
 PrefectureCheckBoxes.displayName = 'PrefectureCheckBoxes';
 
-export default PrefectureCheckBoxes;
+export default React.memo(PrefectureCheckBoxes);
 
-const PrefectureCheckBoxContainer = styled.div`
+const PrefectureCheckBoxContainer = styled.section`
     @media ${devices.tablet} {
         text-align: center;
     }
