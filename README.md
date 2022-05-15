@@ -16,8 +16,8 @@ react-error-boundary (3.1.4)
 
 styled-components (5.3.5)  
 axios (0.26.1)  
-highcharts (10.0.0)
-   highcharts-react-official (3.1.0)  
+highcharts (10.0.0)  
+highcharts-react-official (3.1.0)  
 
 eslint (8.13.0)  
 prettier (2.6.2)
@@ -71,8 +71,9 @@ yarn lint
 yarn format
 ```
 
-## コーディングで注意した点など
+## 注意した点など
 - アプリケーションで統一して使用する用に、色やフォントサイズ等定義しました。
 - 都道府県データはビルド時に取得するようにし、初期描画が速くなるようにしました。
 - 都道府県の人口データは一度取得した場合localのstateで保持し、無駄にAPIを実行しないようにしました。
 - 使用するRESAS-APIを複数の箇所で直接呼び出さず、定義したものを呼び出すようにしました。
+- 他の人が、自分の進捗を把握しやすくするために、Issue・PR・Projectを使用したり、Commitを細かくしたりすることを心がけました。
