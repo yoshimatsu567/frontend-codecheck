@@ -47,7 +47,7 @@ NEXT_PUBLIC_API_KEY=
 
 ### developmentサーバーで起動(Eslint & Prettier実行される)
 ```zsh
-yarn dex
+yarn dev
 ```
 ### production用ビルド
 ```zsh
