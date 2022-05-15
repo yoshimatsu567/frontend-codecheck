@@ -5,7 +5,7 @@ export const colors = {
     WhiteColor: '#FFFFFF',
     HoveringWhiteColor: '#EBEBEB',
     PrimaryColor: '#00A0D1',
-    HoveringPrimaryColor: '#36b0d6',
+    HoveringPrimaryColor: '#36B0D6',
     LoadingBackGroundColor: '#000000D4',
     LoadingBorderTopColor: '#0000001A',
 };
