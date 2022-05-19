@@ -38,6 +38,18 @@ export const setPrefecturePopulationDataForChart = (
         ];
     }
 
+    return setPrefecturePopulationData(
+        year,
+        checkedSeriesData,
+        notCheckedSeriesData
+    );
+};
+
+const setPrefecturePopulationData = (
+    year: string[],
+    checkedSeriesData: Highcharts.SeriesOptionsType[],
+    notCheckedSeriesData: Highcharts.SeriesOptionsType[]
+) => {
     const prefecturePopulationOptionsData: Highcharts.Options = {
         accessibility: {
             enabled: false,
