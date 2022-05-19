@@ -13,7 +13,6 @@ import { fontSizes } from '@/styles/theme/fontSizes';
 export const setPrefecturePopulationDataForChart = (
     prefecturePopulationData: PrefecturePopulationType[]
 ) => {
-    let prefecturePopulationDataLocal = [...prefecturePopulationData];
     let checkedSeriesData: Highcharts.SeriesOptionsType[] = [];
     // 都道府県が選択されていない場合表示するデータ
     const notCheckedSeriesData: Highcharts.SeriesOptionsType[] = [
@@ -21,7 +20,7 @@ export const setPrefecturePopulationDataForChart = (
     ];
     let year: string[] = [];
 
-    for (const populationDataItem of prefecturePopulationDataLocal) {
+    for (const populationDataItem of prefecturePopulationData) {
         let data: number[] = [];
 
         for (const item of populationDataItem.data) {
