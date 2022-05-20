@@ -15,7 +15,6 @@ import Header from '@/components/molecules/common/Header';
 import Main from '@/components/molecules/common/Main';
 import PrefectureCheckBoxes from '@/components/organisms/PrefectureCheckboxes';
 import Chart from '@/components/organisms/Chart';
-import { useErrorHandler } from 'react-error-boundary';
 
 type StaticProps = {
     prefectureList: PrefectureType[];
