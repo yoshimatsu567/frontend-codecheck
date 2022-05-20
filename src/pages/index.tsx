@@ -15,6 +15,7 @@ import Header from '@/components/molecules/common/Header';
 import Main from '@/components/molecules/common/Main';
 import PrefectureCheckBoxes from '@/components/organisms/PrefectureCheckboxes';
 import Chart from '@/components/organisms/Chart';
+import { useErrorHandler } from 'react-error-boundary';
 
 type StaticProps = {
     prefectureList: PrefectureType[];
@@ -38,6 +39,9 @@ const Home: React.FC<StaticProps> = ({ prefectureList }) => {
 
 export const getStaticProps: GetStaticProps<StaticProps> = async () => {
     const prefectureList = await fetchPrefectureList().then((res) => {
+        if(res.error){
+            console.error('Error PrefectureList取得に失敗しました。 local.envにAPI KEYが指定されていないことも想定されます。今一度ご確認ください。')
+        }
         return res.data;
     });
     return {
