@@ -38,8 +38,10 @@ const Home: React.FC<StaticProps> = ({ prefectureList }) => {
 
 export const getStaticProps: GetStaticProps<StaticProps> = async () => {
     const prefectureList = await fetchPrefectureList().then((res) => {
-        if(res.error){
-            console.error('Error PrefectureList取得に失敗しました。 local.envにAPI KEYが指定されていないことも想定されます。今一度ご確認ください。')
+        if (res.error) {
+            console.error(
+                'Error PrefectureList取得に失敗しました。 local.envにAPI KEYが指定されていないことも想定されます。今一度ご確認ください。'
+            );
         }
         return res.data;
     });
